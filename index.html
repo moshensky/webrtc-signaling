@@ -61,6 +61,10 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     var socket = io();
+    socket.on('x', function (data) {
+      console.log(data);
+    });
+
     socket.emit('message-type', { id: 1, data: 'test' });
   </script>
 </body>

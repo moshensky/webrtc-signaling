@@ -20,6 +20,7 @@ io.on('connection', function(socket){
   socket.on('message-type', function(data){
     console.log('on message-type');
     console.log(data);
+    socket.emit('x', data);
   });
 });
 
